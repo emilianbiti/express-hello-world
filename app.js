@@ -68,4 +68,3 @@ app.delete('/delete-account/:customerId', (req, res) => {
   console.log(`Fshihet ose anonimizohet llogaria me ID: ${customerId}`);
   res.json({ success: true, message: `Llogaria ${customerId} u fshi/anonomizua` });
 });
-server.listen(port, () => console.log(`Example app listening on port ${port}`));
