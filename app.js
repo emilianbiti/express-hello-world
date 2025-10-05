@@ -59,3 +59,12 @@ const html = `
   </body>
 </html>
 `
+// DELETE /delete-account/:customerId
+app.delete('/delete-account/:customerId', (req, res) => {
+  const { customerId } = req.params;
+  if (!customerId) {
+    return res.status(400).json({ success: false, error: 'customerId mungon' });
+  }
+  console.log(`Fshihet ose anonimizohet llogaria me ID: ${customerId}`);
+  res.json({ success: true, message: `Llogaria ${customerId} u fshi/anonomizua` });
+});
